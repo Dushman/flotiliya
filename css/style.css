@@ -53,7 +53,13 @@ img {
   border:0;
 } 
 
+figure{margin:0;}
+
 p{margin:0 0 1em 0; line-height:1.5em;}
+
+input, 
+textarea, 
+select{outline:0 none;}
 
 a:link {
   background:transparent;
@@ -66,18 +72,18 @@ a:active,
 a:hover,
 a:focus,
 a:visited {
-    outline:0;
+  outline:0 none;
 }
 
 /*------------- Helpers -------------*/
 
 .clearfix, 
 .clearfix:after{
-   content:" ";
-   visibility:hidden;
-   display:block;
-   height:0;
-   clear:both;
+  content:" ";
+  visibility:hidden;
+  display:block;
+  height:0;
+  clear:both;
 }
 
 .f-left{float:left;}
@@ -91,36 +97,34 @@ a:visited {
 /*--------------- Fonts -------------*/
 
 @font-face {
-    font-family:'gotham_proregular';
-    src: url('../css/fonts/gothaproreg-webfont.eot');
-    src: url('../css/fonts/gothaproreg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../css/fonts/gothaproreg-webfont.woff') format('woff'),
-         url('../css/fonts/gothaproreg-webfont.ttf') format('truetype'),
-         url('../css/fonts/gothaproreg-webfont.svg#gotham_proregular') format('svg');
-    font-weight:normal;
-    font-style:normal;
+  font-family: 'gotham_prolight';
+  src: url('fonts/gothaprolig-webfont.eot');
+  src: url('fonts/gothaprolig-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/gothaprolig-webfont.woff') format('woff'),
+       url('fonts/gothaprolig-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'gotham_probold';
-    src: url('../css/fonts/gothaprobol-webfont.eot');
-    src: url('../css/fonts/gothaprobol-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../css/fonts/gothaprobol-webfont.woff') format('woff'),
-         url('../css/fonts/gothaprobol-webfont.ttf') format('truetype'),
-         url('../css/fonts/gothaprobol-webfont.svg#gotham_probold') format('svg');
-    font-weight:normal;
-    font-style:normal;
+  font-family: 'gotham_probold';
+  src: url('fonts/gothaprobol-webfont.eot');
+  src: url('fonts/gothaprobol-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/gothaprobol-webfont.woff') format('woff'),
+       url('fonts/gothaprobol-webfont.ttf') format('truetype'),
+       url('fonts/gothaprobol-webfont.svg#gotham_probold') format('svg');
+  font-weight:normal;
+  font-style:normal;
 }
 
 @font-face {
-    font-family: 'gotham_prolight';
-    src: url('../css/fonts/gothaprolig-webfont.eot');
-    src: url('../css/fonts/gothaprolig-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../css/fonts/gothaprolig-webfont.woff') format('woff'),
-         url('../css/fonts/gothaprolig-webfont.ttf') format('truetype'),
-         url('../css/fonts/gothaprolig-webfont.svg#gotham_prolight') format('svg');
-    font-weight:normal;
-    font-style:normal;
+  font-family: 'gotham_proregular';
+  src: url('fonts/gothaproreg-webfont.eot');
+  src: url('fonts/gothaproreg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/gothaproreg-webfont.woff') format('woff'),
+       url('fonts/gothaproreg-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*---------- Main styles ------------*/
@@ -140,9 +144,387 @@ body{
   line-height:100%;
   min-height:100%;
   background-color:#fff;
-  color:#000;
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
+  color:#666;
+  font-family:'gotham_proregular';
 }
+
+.section{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+}
+
+.section-inn{
+  display:table;
+  position:relative;
+  width:1200px;
+  margin:0 auto;
+}
+
+/*-------------- Header --------------*/
+
+header[role="banner"]{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding:23px 0 28px 0;
+  border-bottom:1px solid #f2f2f2;
+}
+
+header[role="banner"] .f-right{
+  float:right;
+  width:42.5%;
+  padding-top:17px;
+}
+
+header[role="banner"] .f-left{
+  float:left;
+  width:42.5%;
+  padding-top:17px;
+}
+
+header[role="banner"] .logo-wrap{
+  overflow:hidden;
+  width:15%;
+}
+
+header[role="banner"] .f-left nav.main-menu{
+  display:block;
+  clear:both;
+  overflow:hidden;
+  padding-bottom:15px;
+  white-space:nowrap;
+}
+
+header[role="banner"] nav.main-menu a{
+  color:#46a6f8;
+  font-size:14px;
+  float:left;
+  margin:0 0 0 37px;
+  text-decoration:none;
+  border-bottom:1px solid #dbebfd;
+}
+
+header[role="banner"] nav.main-menu a:first-child{margin-left:0;}
+
+header[role="banner"] nav.main-menu a:hover{border-bottom-color:transparent;}
+
+header[role="banner"] .f-left nav.sub-menu{
+  float:right;
+}
+
+header[role="banner"] nav.sub-menu a{
+  float:left;
+  color:#ccc;
+  font-size:12px;
+  text-decoration:none;
+  margin:0 0 0 40px;
+}
+
+header[role="banner"] nav.sub-menu a:first-child{margin-left:0;}
+
+header[role="banner"] nav.sub-menu a span.red{color:#f26868;}
+
+header[role="banner"] .logo-wrap a{
+  text-decoration:none;
+  display:block;
+  width:62px;
+  height:69px;
+  margin:0 auto;
+}
+
+header[role="banner"] .f-right nav.main-menu{margin-bottom:15px;}
+
+header[role="banner"] .f-right nav.main-menu, 
+header[role="banner"] .f-right nav.sub-menu{float:left;clear:left;}
+
+.menu-l-wrap{float:left;}
+
+.header-contacts-block{
+  float:right;
+  max-width:240px;
+}
+
+.header-contacts-block p{
+  display:block;
+  clear:both;
+  text-align:right;
+  margin:0 0 9px 0;
+  line-height:16px;
+  font-size:12px;
+  color:#ccc;
+}
+
+.header-contacts-block > strong{
+  float:right;
+  padding-left:27px;
+  font-size:24px;
+  line-height:24px;
+  color:#46a6f8;
+  background:transparent url('../img/blue-phone.png') no-repeat 0 4px;
+}
+
+.header-contacts-block > strong span{
+  font-size:16px;
+}
+
+/*------------ Top Slider ------------*/
+
+#index-top-slider .slide figure{
+  position:relative;
+  overflow:hidden;
+}
+
+#index-top-slider .slide{position:relative;}
+
+#index-top-slider .bx-wrapper {
+  position:relative;
+  margin:0 auto;
+  padding:0;
+  *zoom:1;
+}
+
+#index-top-slider .bx-wrapper img {
+  max-width:100%;
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.bx-wrapper .bx-viewport {
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+#index-top-slider .bx-pager{
+  position:absolute;
+  width:100%;
+  bottom:20px;
+  text-align:center;
+}
+
+#index-top-slider .bx-pager .bx-pager-item{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  margin:0 0 0 15px;
+}
+
+#index-top-slider .bx-pager .bx-pager-item a{
+  display:block;
+  text-indent:-9999px;
+  height:10px;
+  width:10px;
+  background:transparent;
+  border-radius:100%;
+  margin:0 auto;
+  top:3px;
+  position:relative;
+  border:1px solid #46a6f8;
+}
+
+#index-top-slider .bx-pager .bx-pager-item a.active{
+  border-color:transparent;
+  height:16px;
+  width:16px;
+  background:#46a6f8;
+  top:0;
+}
+
+#index-top-slider .bx-pager .bx-pager-item:first-child{margin-left:0;}
+
+#index-top-slider .bx-controls-direction{
+  height:22px;
+  position:absolute;
+  top:50%;
+  margin-top:-15px;
+  width:100%;
+}
+
+#index-top-slider .bx-controls-direction a{
+  display:block;
+  line-height:22px;
+  font-size:30px;
+  text-decoration:none;
+  color:#fff;
+  position:absolute;
+  height:22px;
+  width:13px;
+  font-family: 'gotham_prolight';
+}
+
+#index-top-slider .bx-controls-direction a.bx-prev{
+  left:45px;
+}
+
+#index-top-slider .bx-controls-direction a.bx-next{
+  right:45px;
+}
+
+#index-top-slider .slide figure figcaption{
+  position:absolute;
+  width:100%;
+  overflow:hidden;
+  text-align:center;
+  color:#fff;
+  display:block;
+  top:95px;
+}
+
+.slide-title{
+  padding:0;
+  margin:0 0 22px 0;
+  font-size:48px;
+  line-height:48px;
+  font-weight:normal;
+  font-family: 'gotham_prolight';
+}
+
+#index-top-slider .slide figure figcaption p{
+  font-size:14px;
+  line-height:14px;
+  margin:0;
+  text-transform:uppercase;
+  font-family: 'gotham_proregular';
+  letter-spacing:3px;
+}
+
+/*-------------- Footer --------------*/
+
+footer[role="contentinfo"]{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  background-color:#f7f7f6;
+}
+
+.foo-social-block{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  background-color:#ccc;
+  padding:30px 0;
+}
+
+.footer-contacts-block{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding:65px 0 0 0;
+}
+
+.footer-contacts-block .top-block{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding-bottom:65px;
+}
+
+.footer-contacts-block .top-block .w-half strong:first-child{
+  display:block;
+  clear:both;
+  overflow:hidden;
+  margin-bottom:15px;
+  font-family: 'gotham_probold';
+  font-weight:normal;
+  font-size:16px;
+}
+
+.footer-contacts-block .short-info p{
+  margin:0 85px 20px 0;
+  font-size:14px;
+  line-height:24px;
+}
+
+.footer-contacts-block .phone-info{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding:25px 0;
+}
+
+.footer-contacts-block .phone-info:before, 
+.footer-contacts-block .phone-info:after{
+  content:'';
+  display:block;
+  height:1px;
+  background-color:#dededd;
+  width:30%;
+  position:absolute;
+  left:0;
+}
+
+.footer-contacts-block .phone-info:before{top:0;}
+
+.footer-contacts-block .phone-info:after{bottom:0;}
+
+.footer-contacts-block .phone-info p{
+  display:block;
+  clear:both;
+  margin:0 0 12px 0;
+  line-height:16px;
+  font-size:14px;
+}
+
+.footer-contacts-block .phone-info > strong{
+  float:left;
+  padding-left:27px;
+  font-size:24px;
+  line-height:24px;
+  color:#46a6f8;
+  background:transparent url('../img/blue-phone.png') no-repeat 0 4px;
+}
+
+.footer-contacts-block .phone-info > strong span{
+  font-size:16px;
+}
+
+.footer-contacts-block .bottom-block{
+  padding:40px 0;
+  border-top:1px solid #dededd;
+  border-bottom:1px solid #dededd;
+  position:relative;
+  overflow:hidden;
+  clear:both;
+}
+
+.footer-contacts-block .bottom-block p.f-left{
+  margin:0;
+  font-family: 'gotham_prolight';
+  font-size:18px;
+  line-height:30px;
+  width:75%;
+  padding-right:5%;
+}
+
+a.blue-btn{
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  background-color:#46a6f8;
+  padding:0 30px;
+  line-height:50px;
+  border-radius:50px;
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 1200px){
+
+  .section-inn{width:100%;}
+
+}
+
+
+
+
 
 
