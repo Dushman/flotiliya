@@ -649,13 +649,163 @@ header[role="banner"] .f-right nav.sub-menu{float:left;clear:left;}
   margin-bottom:15px;
 }
 
-.section-distribution .a-center{margin-bottom:25px;}
+.section-distribution .a-center{margin-bottom:30px;}
 
 .section-distribution .a-center p{
   color:#ccc;
   font-size:18px;
   line-height:26px;
   margin:0 220px;
+}
+
+.index-tabs-control-block{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.index-tabs-control-block > div{
+  display:inline-block;
+  text-align:center;
+  cursor:pointer;
+  margin:0 0 0 50px;
+  color:#46a6f8;
+  font-size:18px;
+  line-height:18px;
+  padding-top:55px;
+  background-repeat:no-repeat;
+  background-position:50% 0;
+}
+
+.index-tabs-control-block > div.selected{color:#333;}
+
+.index-tabs-control-block > div:first-child{margin-left:0;}
+
+.index-tabs-control-block > div.item-1{background-image:url('../img/apartment-1.png');}
+
+.index-tabs-control-block > div.item-2{background-image:url('../img/apartment-2.png');}
+
+.index-tabs-control-block > div.item-3{background-image:url('../img/apartment-2.png');}
+
+.index-tabs-control-block > div.item-4{background-image:url('../img/apartment-4.png');}
+
+.index-tabs-control-block > div.item-1.selected{background-image:url('../img/apartment-1-black.png');}
+
+.index-tabs-control-block > div.item-2.selected{background-image:url('../img/apartment-2-black.png');}
+
+.index-tabs-control-block > div.item-3.selected{background-image:url('../img/apartment-2-black.png');}
+
+.index-tabs-control-block > div.item-4.selected{background-image:url('../img/apartment-4-black.png');}
+
+.distibutions-slider-wrapper{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding-bottom:55px;
+}
+
+.distibutions-slider-wrapper > div{display:none;}
+
+.distibutions-slider-wrapper > div:first-child{display:block;}
+
+.distibutions-slider-wrapper ul li.slide{text-align:center;}
+
+.distibutions-slider-wrapper ul li.slide figure{
+  display:inline-block;
+}
+
+.distibutions-slider-wrapper ul li.slide .text-block{
+  width:830px;
+  margin:0 auto;
+  padding-top:35px;
+}
+
+.distibutions-slider-wrapper ul li.slide .text-block .slide-title{
+  padding:0;
+  color:#333;
+  margin:0 0 15px 0;
+  font-size:22px;
+  line-height:26px;
+  font-weight:normal;
+  font-family: 'gotham_prolight';
+}
+
+.distibutions-slider-wrapper ul li.slide .text-block p{
+  color:#ccc;
+  font-size:18px;
+  line-height:26px;
+  margin-bottom:25px;
+}
+
+.distibutions-slider-wrapper ul li.slide .text-block a.red-btn{
+  line-height:50px;
+  display:inline-block;
+}
+
+.distibutions-slider-wrapper .bx-pager{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  text-align:center;
+}
+
+.distibutions-slider-wrapper .bx-pager .bx-pager-item{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  margin:0 0 0 15px;
+}
+
+.distibutions-slider-wrapper .bx-pager .bx-pager-item a{
+  display:block;
+  text-indent:-9999px;
+  height:10px;
+  width:10px;
+  background:transparent;
+  border-radius:100%;
+  margin:0 auto;
+  top:3px;
+  position:relative;
+  border:1px solid #46a6f8;
+}
+
+.distibutions-slider-wrapper .bx-pager .bx-pager-item a.active{
+  border-color:transparent;
+  height:16px;
+  width:16px;
+  background:#46a6f8;
+  top:0;
+}
+
+.distibutions-slider-wrapper .bx-pager .bx-pager-item:first-child{margin-left:0;}
+
+.distibutions-slider-wrapper .bx-controls-direction{
+  height:26px;
+  position:absolute;
+  top:50%;
+  margin-top:-150px;
+  width:100%;
+}
+
+.distibutions-slider-wrapper .bx-controls-direction a{
+  display:block;
+  font-size:26px;
+  text-decoration:none;
+  color:#46a6f8;
+  position:absolute;
+  height:26px;
+  width:26px;
+  font-family: 'Glyphter';
+}
+
+.distibutions-slider-wrapper .bx-controls-direction a.bx-prev{
+  left:45px;
+}
+
+.distibutions-slider-wrapper .bx-controls-direction a.bx-next{
+  right:45px;
 }
 
 /*----------- Bottom Slider ----------*/
@@ -992,6 +1142,16 @@ a.blue-btn{
   color:#fff;
   font-size:14px;
   background-color:#46a6f8;
+  padding:0 30px;
+  line-height:50px;
+  border-radius:50px;
+}
+
+a.red-btn{
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  background-color:#ea5454;
   padding:0 30px;
   line-height:50px;
   border-radius:50px;

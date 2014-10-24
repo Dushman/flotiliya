@@ -22,6 +22,13 @@ $(function(){
     }
   });
 
+  $('.apartment-slider-1').bxSlider({
+    minSlides: 1,
+    maxSlides: 1,
+    nextText: 'B',
+    prevText: 'A'
+  });
+
   //Map-----------------------------------------------
 
   var map;
@@ -128,7 +135,7 @@ $(function(){
         });
         
         marker.setTitle(main[0].toString());              
-        marker.push(marker);
+
       } 
     }
 
@@ -161,7 +168,7 @@ $(function(){
         });
         
         marker.setTitle(metro[0].toString());              
-        markersMetro.push(marker);
+
       } 
     }
 
@@ -182,5 +189,11 @@ $(function(){
     } 
 
   google.maps.event.addDomListener(window, 'load', initialize);
+
+  $('.index-tabs-control-block > div').click(function(e){
+    e.preventDefault();
+    $(this).addClass('selected').siblings().removeClass('selected');
+    var index = $(this).index(); 
+  });
 
 });
