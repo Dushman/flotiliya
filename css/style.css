@@ -785,7 +785,9 @@ header[role="banner"] .f-right nav.sub-menu{float:left;clear:left;}
   width:100%;
   height:100%;
   z-index:1;
-  background-color:#fff;
+  background-color:#fff!important;
+  margin:0;
+  padding:0;
 }
 
 #map_canvas img{max-width:none;}
