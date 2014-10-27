@@ -22,13 +22,6 @@ $(function(){
     }
   });
 
-  $('.apartment-slider-1').bxSlider({
-    minSlides: 1,
-    maxSlides: 1,
-    nextText: 'B',
-    prevText: 'A'
-  });
-
   //Map-----------------------------------------------
 
   var map;
@@ -71,9 +64,9 @@ $(function(){
   function initialize() {
   
     var styles = [
-      { "stylers": [ { "color": "#ffffff" } ] },
-      { "featureType": "road", "stylers": [ { "color": "#9fd4ff" } ] },
-      { "elementType": "labels", "stylers": [ { "visibility": "off" } ] }
+      { 'stylers': [ { 'color': '#ffffff' } ] },
+      { 'featureType': 'road', 'stylers': [ { 'color': '#9fd4ff' } ] },
+      { 'elementType': 'labels', 'stylers': [ { 'visibility': 'off' } ] }
     ];
 
     var styledMap = new google.maps.StyledMapType(styles,
@@ -111,7 +104,7 @@ $(function(){
   // Main
 
     var main = [
-      ['Флотилия', 55.8659, 37.4599, 0]
+      ['"Флотилия"', 55.8659, 37.4599, 0]
     ];
     
     function setMarker(map, locations) {      
@@ -144,7 +137,7 @@ $(function(){
     var metroArr = [];
 
     var metroArr = [
-      ['Речной вокзал', 55.8553, 37.4765, 0]
+      ['м. "Речной вокзал"', 55.8553, 37.4765, 0]
     ];
     
     function setMarkersMetro(map, locations) {      
@@ -164,7 +157,7 @@ $(function(){
             icon: image,
             shape: shape,
             animation: google.maps.Animation.DROP,
-            zIndex: metro[3]
+            zIndex: metro[2]
         });
         
         marker.setTitle(metro[0].toString());              
@@ -190,10 +183,45 @@ $(function(){
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
+  //Tabs-----------------------------------------------
+
+  var slider1 = $('.apartment-slider-1').bxSlider({
+    minSlides: 1,
+    maxSlides: 1,
+    nextText: 'B',
+    prevText: 'A'
+  });
+
+  var slider2 = $('.apartment-slider-2').bxSlider({
+    minSlides: 1,
+    maxSlides: 1,
+    nextText: 'B',
+    prevText: 'A'
+  });
+
+  var slider3 = $('.apartment-slider-3').bxSlider({
+    minSlides: 1,
+    maxSlides: 1,
+    nextText: 'B',
+    prevText: 'A'
+  });
+
+  var slider4 = $('.apartment-slider-4').bxSlider({
+    minSlides: 1,
+    maxSlides: 1,
+    nextText: 'B',
+    prevText: 'A'
+  });
+
   $('.index-tabs-control-block > div').click(function(e){
     e.preventDefault();
     $(this).addClass('selected').siblings().removeClass('selected');
     var index = $(this).index(); 
+    $('.distibutions-slider-wrapper > div').eq(index).show().siblings().hide();
+    slider1.reloadSlider();
+    slider2.reloadSlider();
+    slider3.reloadSlider();
+    slider4.reloadSlider();
   });
 
 });
