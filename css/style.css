@@ -496,7 +496,6 @@ header[role="banner"] .f-right nav.sub-menu{float:left;clear:left;}
   }
 }
 
-
 /*------------- Advantage -----------*/
 
 .section-advantage{padding:50px 0;}
@@ -1289,21 +1288,3 @@ a.red-btn{
 .foo-social-block a:hover{color:#46a6f8;}
 
 .foo-social-block a:hover span{visibility:visible;}
-
-
-
-
-
-
-
-@media all and (max-width: 1200px){
-
-
-
-}
-
-
-
-
-
-
