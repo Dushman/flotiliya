@@ -64,9 +64,9 @@ $(function(){
   function initialize() {
   
     var styles = [
-      { 'stylers': [ { 'color': '#ffffff' } ] },
-      { 'featureType': 'road', 'stylers': [ { 'color': '#9fd4ff' } ] },
-      { 'elementType': 'labels', 'stylers': [ { 'visibility': 'off' } ] }
+      {'stylers' : [{'color' : '#ffffff'}]},
+      {'featureType' : 'road', 'stylers' : [{'color' : '#9fd4ff'}]},
+      {'elementType' : 'labels', 'stylers' : [{'visibility' : 'off'}]}
     ];
 
     var styledMap = new google.maps.StyledMapType(styles,
